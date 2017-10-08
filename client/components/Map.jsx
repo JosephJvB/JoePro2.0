@@ -36,7 +36,7 @@ class Map extends React.Component {
   render () {
     let { height, width } = this.state
     return (
-      <div className="map" style={{width, height}} ref="map" >I should be a map!</div>
+      <div className="map" style={{width, height}} ref="map" >map go here</div>
     )
   }
 }
