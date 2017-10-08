@@ -14,12 +14,12 @@ class Map extends React.Component {
     }
   }
   componentDidMount () {
-    this.loadMap(this.state.center)
+    this.initMap(this.state.center)
   }
-  loadMap (center) {
+  initMap (center) {
     this.map = new google.maps.Map(this.refs.map, {
       center,
-      zoom: 17
+      zoom: 13
     })
     this.marker = new google.maps.Marker({
       position: center,
