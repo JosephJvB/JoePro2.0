@@ -5,7 +5,7 @@ class Map extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      height: '41vh',
+      height: '500px',
       width: '100%'
     }
   }
