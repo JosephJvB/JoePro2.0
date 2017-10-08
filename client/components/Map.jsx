@@ -1,19 +1,22 @@
 import React from 'react'
 import { GoogleMapLoader, GoogleMap, Marker } from 'react-google-maps' // import sub-modules from the library, not the whole thing
 
-export default class Map extends React.Component {
-  constructor(props) {
+class Map extends React.Component {
+  constructor (props) {
     super(props)
     this.state = {
       height: '40vh',
       width: '40vh',
-      center: props.center
+      center: {
+        lat: -41.300000,
+        lng: 174.772779
+      }
     }
   }
-  componentDidMount() {
+  componentDidMount () {
     this.loadMap(this.state.center)
   }
-  loadMap(center) {
+  loadMap (center) {
     this.map = new google.maps.Map(this.refs.map, {
       center,
       zoom: 17
@@ -23,10 +26,12 @@ export default class Map extends React.Component {
       map: this.map
     })
   }
-  render() {
+  render () {
     let { height, width } = this.state
     return (
       <div className="map" style={{width, height}} ref="map" >I should be a map!</div>
     )
   }
 }
+
+export default Map
