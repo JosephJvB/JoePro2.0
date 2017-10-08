@@ -21,8 +21,15 @@ class Map extends React.Component {
       center,
       zoom: 13
     })
+
+    // var markers = [
+    //   {lat: -41.292010, lng: 174.784688}, //waitangi
+    //   {lat: -41.321686, lng: 174.780642}, //treetops
+    //   {lat: -41.279619, lng: 174.754061} // karori
+    // ]
+
     this.marker = new google.maps.Marker({
-      position: center,
+      position: {lat: -41.292010, lng: 174.784688},
       map: this.map
     })
   }
