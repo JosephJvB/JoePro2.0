@@ -45,6 +45,8 @@ class Map extends React.Component {
       map: this.map
     })
 
+//i need these to print text to the info window, what do?
+
     waitangi.addListener('click', () => {
       console.log('once upon a time')
     })
