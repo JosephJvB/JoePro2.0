@@ -1,4 +1,5 @@
 import React from 'react'
+import { GoogleMapLoader, GoogleMap, Marker } from 'react-google-maps'
 
 import Header from './Header'
 import Map from './Map'
@@ -10,12 +11,12 @@ const App = () => {
       <Header />
       <div className="columns">
         <div className="column">
-          <h1 className="subtitle is-4">Map:</h1>
+          <h1 className="subtitle is-3">Map:</h1>
           <hr />
-          <Map />
+          <Map/>
         </div>
         <div className="column">
-          <h1 className="subtitle is-4">Info:</h1>
+          <h1 className="subtitle is-3">Info:</h1>
           <hr />
           <Info />
         </div>
