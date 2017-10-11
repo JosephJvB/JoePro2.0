@@ -1,5 +1,5 @@
 import React from 'react'
-import { GoogleMapLoader, GoogleMap, Marker } from 'react-google-maps'
+// import { GoogleMapLoader, GoogleMap, Marker } from 'react-google-maps'
 
 class Map extends React.Component {
   constructor (props) {
@@ -13,7 +13,7 @@ class Map extends React.Component {
     this.initMap()
   }
   initMap () {
-    this.map = new google.maps.Map(this.refs.map, {
+    this.map = new window.google.maps.Map(this.refs.map, {
       center: {lat: -41.300000, lng: 174.772779},
       zoom: 13
     })
@@ -46,7 +46,13 @@ class Map extends React.Component {
     })
 
     waitangi.addListener('click', () => {
-      this.map.setZoom()
+      console.log('once upon a time')
+    })
+    treetops.addListener('click', () => {
+      console.log('joe made an app')
+    })
+    kmini.addListener('click', () => {
+      console.log('everyone died the end')
     })
   }
 
@@ -54,7 +60,7 @@ class Map extends React.Component {
     let { height, width } = this.state
     return (
       <div className="map" style={{width, height}} ref="map" >
-        map go here
+        I am a map?
       </div>
     )
   }
