@@ -18,34 +18,26 @@ class Map extends React.Component {
       zoom: 13
     })
 
-    // const markers = [
-    //   {lat: -41.292010, lng: 174.784688}, // waitangi
-    //   {lat: -41.321686, lng: 174.780642}, // treetops
-    //   {lat: -41.279619, lng: 174.754061} // karori
-    // ]
-
-    // markers.forEach(coords => {
-    //   addMarker(coords)
-    // })
-
-    // function addMarker (coords) {}
-
-    let waitangi = new google.maps.Marker({
+    const waitangi = new google.maps.Marker({
       position: {lat: -41.292010, lng: 174.784688},
-      map: this.map
+      map: this.map,
+      title: 'Waitangi Park'
     })
 
-    let treetops = new google.maps.Marker({
+    const treetops = new google.maps.Marker({
       position: {lat: -41.321686, lng: 174.780642},
-      map: this.map
+      map: this.map,
+      title: 'Treetops'
     })
 
-    let kmini = new google.maps.Marker({
+    const kmini = new google.maps.Marker({
       position: {lat: -41.279619, lng: 174.754061},
-      map: this.map
+      map: this.map,
+      title: 'Karori Ramps'
     })
 
-//i need these to print text to the info window, what do?
+    // i need these to print text to the info window
+
 
     waitangi.addListener('click', () => {
       console.log('once upon a time')

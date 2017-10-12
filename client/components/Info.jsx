@@ -1,13 +1,15 @@
 import React from 'react'
 
-const Info = () => {
+// info has to take in props so I can give it the info it needs to print on screen. And because those props are likely coming from map do I need to render info within my map component?
+
+const Info = (props) => {
   return (
     <div className="box is-info">
       <div className="columns">
         <div className="column is-1">
         </div>
         <div className="column has-text-left">
-          <h3 className="subtitle is-3">Waitangi Park</h3>
+          <h3 className="subtitle is-3">{props.name}</h3>
         </div>
       </div>
       <div className="columns">
