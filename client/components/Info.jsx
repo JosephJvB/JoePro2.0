@@ -7,7 +7,7 @@ class Info extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      likes: props.activeSpot.likes
+      likes: this.props.activeSpot.likes
     }
     // binds go here
     this.handleLike = this.handleLike.bind(this)

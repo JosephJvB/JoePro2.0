@@ -38,6 +38,20 @@ class Map extends React.Component {
       title: 'Karori Ramps'
     })
 
+    const fusion = new google.maps.Marker({
+      position: {lat: -41.2920394, lng: 174.7765633},
+      map: this.map,
+      title: 'Fusion',
+      icon:
+    })
+
+    const cheapskates = new google.maps.Marker({
+      position: {lat: -41.290902, lng: 174.774753},
+      map: this.map,
+      title: 'Cheapskates',
+      icon: 
+    })
+
     // i need these to print text to the info window
 
     waitangi.addListener('click', () => {
@@ -51,6 +65,14 @@ class Map extends React.Component {
     kmini.addListener('click', () => {
       console.log('everyone died the end')
       this.state.showSpotInfo(this.state.data[3])
+    })
+    fusion.addListener('click', () => {
+      console.log('im a sellout')
+      this.state.showSpotInfo(this.state.data[0])
+    })
+    cheapskates.addListener('click', () => {
+      console.log('give me $$')
+      this.state.showSpotInfo(this.state.data[0])
     })
   }
 
