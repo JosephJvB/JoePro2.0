@@ -42,15 +42,15 @@ class Map extends React.Component {
 
     waitangi.addListener('click', () => {
       console.log('once upon a time')
-      showSpotInfo(data[1])
+      this.state.showSpotInfo(this.state.data[1])
     })
     treetops.addListener('click', () => {
       console.log('joe made an app')
-      showSpotInfo(data[2])
+      this.state.showSpotInfo(this.state.data[2])
     })
     kmini.addListener('click', () => {
       console.log('everyone died the end')
-      showSpotInfo(data[3])
+      this.state.showSpotInfo(this.state.data[3])
     })
   }
 
