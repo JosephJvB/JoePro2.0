@@ -41,6 +41,7 @@ class Map extends React.Component {
 
     waitangi.addListener('click', () => {
       console.log('once upon a time')
+      this.markerClick()
     })
     treetops.addListener('click', () => {
       console.log('joe made an app')
