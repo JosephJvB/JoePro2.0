@@ -1,6 +1,13 @@
 module.exports = {
   data: [
     {
+      spotName: 'Where do you wanna skate?',
+      address: '',
+      terrain: [''],
+      comments: 'click a marker to choose a spot!',
+      likes: 10
+    },
+    {
       spotName: 'Waitangi Park',
       address: 'Chaffers Wharf',
       terrain: ['street', 'half-pipe', 'bowl'],

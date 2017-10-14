@@ -12,18 +12,18 @@ class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      spotName: 'Where do you wanna skate?',
-      address: '',
-      terrain: '',
-      comments: '',
-      likes: ''
+      activeSpot: data[0]
     }
     // BINDS GO HERE
   }
-
+  markerClick (spot) {
+    this.setState({
+      activeSpot: spot
+    })
+  }
   // HANDLERS GO HERE
 
-  return () {
+  render () {
     return (
       <section className="section has-text-centered">
         <Header />
@@ -36,7 +36,7 @@ class App extends React.Component {
           <div className="column">
             <h1 className="subtitle is-3">Info:</h1>
             <hr />
-            <Info name='SUP'/>
+            <Info activeSpot={this.state.activeSpot}/>
           </div>
         </div>
       </section>

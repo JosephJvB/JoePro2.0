@@ -38,7 +38,6 @@ class Map extends React.Component {
 
     // i need these to print text to the info window
 
-
     waitangi.addListener('click', () => {
       console.log('once upon a time')
       this.markerClick()
