@@ -4,7 +4,7 @@ import Header from './Header'
 import Map from './Map'
 import Info from './Info'
 
-import data from '../../data.js'
+import { data } from '../../data.js'
 
 import {HashRouter as Router, Route} from 'react-router-dom'
 
@@ -15,13 +15,15 @@ class App extends React.Component {
       activeSpot: data[0]
     }
     // BINDS GO HERE
+    this.showSpotInfo = this.showSpotInfo.bind(this)
   }
-  markerClick (spot) {
+
+  // HANDLERS GO HERE
+  showSpotInfo (spot) {
     this.setState({
       activeSpot: spot
     })
   }
-  // HANDLERS GO HERE
 
   render () {
     return (
@@ -31,7 +33,7 @@ class App extends React.Component {
           <div className="column">
             <h1 className="subtitle is-3">Map:</h1>
             <hr />
-            <Map/>
+            <Map showSpotInfo={this.showSpotInfo} data={data}/>
           </div>
           <div className="column">
             <h1 className="subtitle is-3">Info:</h1>

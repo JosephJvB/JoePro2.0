@@ -1,7 +1,7 @@
 module.exports = {
   data: [
     {
-      spotName: 'Where do you wanna skate?',
+      spotName: 'Which spot?',
       address: '',
       terrain: [''],
       comments: 'click a marker to choose a spot!',

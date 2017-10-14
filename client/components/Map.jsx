@@ -6,7 +6,9 @@ class Map extends React.Component {
     super(props)
     this.state = {
       height: '500px',
-      width: '100%'
+      width: '100%',
+      data: props.data,
+      showSpotInfo: props.showSpotInfo
     }
   }
   componentDidMount () {
@@ -40,13 +42,15 @@ class Map extends React.Component {
 
     waitangi.addListener('click', () => {
       console.log('once upon a time')
-      this.markerClick()
+      showSpotInfo(data[1])
     })
     treetops.addListener('click', () => {
       console.log('joe made an app')
+      showSpotInfo(data[2])
     })
     kmini.addListener('click', () => {
       console.log('everyone died the end')
+      showSpotInfo(data[3])
     })
   }
 
