@@ -5,7 +5,6 @@ import Map from './Map'
 import Info from './Info'
 
 import { data } from '../../data.js'
-import { getInfo } from '../api-client'
 
 import { Route } from 'react-router-dom'
 
