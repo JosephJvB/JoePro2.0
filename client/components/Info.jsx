@@ -18,12 +18,12 @@ class Info extends React.Component {
 
   render () {
     return (
-      <div className="box is-info">
+      <div className="box">
         <div className="columns">
           <div className="column is-1">
           </div>
           <div className="column has-text-left">
-            <h3 className="subtitle is-3"><Link to={`/SingleSpot/${this.props.activeSpot.spotName}`}>{this.props.activeSpot.spotName}</Link></h3>
+            <h3 className="subtitle is-3"><Link to={`/Spots/${this.props.activeSpot.spotName}`}>{this.props.activeSpot.spotName}</Link></h3>
             <hr />
           </div>
           <div className="column is-2">
