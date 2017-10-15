@@ -12,13 +12,34 @@ class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      activeSpot: data[0]
+      activeSpot: data[0],
+      isMapVisible: true,
+      isInfoVisible: true,
+      isSingleSpotVisible: false
     }
     // BINDS GO HERE
     this.showSpotInfo = this.showSpotInfo.bind(this)
+    this.handleSpotClick = this.handleSpotClick.bind(this)
+    this.handleHomeClick = this.handleHomeClick.bind(this)
   }
 
   // HANDLERS GO HERE
+  handleSpotClick () {
+    this.setState({
+      isMapVisible: false,
+      isInfoVisivble: false,
+      isSingleSpotVisible: true
+    })
+  }
+
+  handleHomeClick () {
+    this.setState({
+      isMapVisible: true,
+      isInfoVisivble: true,
+      isSingleSpotVisible: false
+    })
+  }
+
   showSpotInfo (spot) {
     this.setState({
       activeSpot: spot
@@ -33,12 +54,12 @@ class App extends React.Component {
           <div className="column">
             <h1 className="subtitle is-3">Map:</h1>
             <hr />
-            <Map showSpotInfo={this.showSpotInfo} data={data}/>
+            {this.state.isMapVisible && <Map showSpotInfo={this.showSpotInfo} data={data}/>}
           </div>
           <div className="column">
             <h1 className="subtitle is-3">Info:</h1>
             <hr />
-            <Info activeSpot={this.state.activeSpot}/>
+            {this.state.isInfoVisible && <Info activeSpot={this.state.activeSpot} handleSpotClick={this.handleSpotClick}/>}
           </div>
         </div>
       </section>

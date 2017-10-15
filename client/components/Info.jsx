@@ -23,7 +23,7 @@ class Info extends React.Component {
           <div className="column is-1">
           </div>
           <div className="column has-text-left">
-            <h3 className="subtitle is-3"><Link to={`/Spots/${this.props.activeSpot.spotName}`}>{this.props.activeSpot.spotName}</Link></h3>
+            <h3 className="subtitle is-3" onClick={() => this.props.handleSpotClick}>{this.props.activeSpot.spotName}</h3>
             <hr />
           </div>
           <div className="column is-2">
