@@ -1,12 +1,11 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
 
 import Header from './Header'
-import Map from './Map'
-import Info from './Info'
+import MapAndInfo from './MapAndInfo'
+import SingleSpot from './SingleSpot'
 
 import { data } from '../../data.js'
-
-import { Route } from 'react-router-dom'
 
 class App extends React.Component {
   constructor (props) {
@@ -29,18 +28,10 @@ class App extends React.Component {
     return (
       <section className="section has-text-centered">
         <Header />
-        <div className="columns">
-          <div className="column">
-            <h1 className="subtitle is-3">Map:</h1>
-            <hr />
-            <Map showSpotInfo={this.showSpotInfo} data={data}/>
-          </div>
-          <div className="column">
-            <h1 className="subtitle is-3">Info:</h1>
-            <hr />
-            <Info activeSpot={this.state.activeSpot}/>
-          </div>
-        </div>
+        <Route exact path='/' render={() =>
+          (<MapAndInfo showSpotInfo={this.showSpotInfo} data={data} activeSpot={this.state.activeSpot}/>)
+        }/>
+        <Route path='/Spots/:spotName' render={() => (<SingleSpot activeSpot={this.state.activeSpot}/>)}/>
       </section>
     )
   }
