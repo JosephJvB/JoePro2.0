@@ -18,7 +18,7 @@ class Info extends React.Component {
 
   render () {
     return (
-      <div className="box is-info">
+      <div className="box">
         <div className="columns">
           <div className="column is-1">
           </div>
