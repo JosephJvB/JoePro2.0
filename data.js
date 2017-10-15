@@ -16,7 +16,7 @@ module.exports = {
     },
     {
       spotName: 'Treetops',
-      address: 'email me for location ;)',
+      address: 'Off Edinburgh Tce. Behind the athletics track.',
       terrain: ['street', ', ', 'mini-ramp'],
       comments: 'DIY park, child of Tom Cully & friends. In Newtown away from the main drag, Treetops is a park by skaters for skaters. One of the best places to spend a summer day with the crew, turn up with food and a few beers and settle in.',
       likes: 3

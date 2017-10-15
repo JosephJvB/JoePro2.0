@@ -23,33 +23,36 @@ class Map extends React.Component {
     const waitangi = new google.maps.Marker({
       position: {lat: -41.292010, lng: 174.784688},
       map: this.map,
-      title: 'Waitangi Park'
+      title: 'Waitangi Park',
+      icon: '/images/green-dot.png'
     })
 
     const treetops = new google.maps.Marker({
       position: {lat: -41.321686, lng: 174.780642},
       map: this.map,
-      title: 'Treetops'
+      title: 'Treetops',
+      icon: '/images/green-dot.png'
     })
 
     const kmini = new google.maps.Marker({
       position: {lat: -41.279619, lng: 174.754061},
       map: this.map,
-      title: 'Karori Ramps'
+      title: 'Karori Ramps',
+      icon: '/images/green-dot.png'
     })
 
     const fusion = new google.maps.Marker({
       position: {lat: -41.2920394, lng: 174.7765633},
       map: this.map,
       title: 'Fusion',
-      icon:
+      icon: '/images/white-dot.png'
     })
 
     const cheapskates = new google.maps.Marker({
-      position: {lat: -41.290902, lng: 174.774753},
+      position: {lat: -41.290902, lng: 174.776947},
       map: this.map,
       title: 'Cheapskates',
-      icon: 
+      icon: '/images/white-dot.png'
     })
 
     // i need these to print text to the info window
