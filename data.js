@@ -11,7 +11,7 @@ module.exports = {
       spotName: 'Waitangi Park',
       address: 'Chaffers Wharf',
       terrain: ['street', ', ', 'half-pipe', ', ', 'bowl'],
-      comments: 'Welly-central\'s main park. All features are concrete, street skaters have a few nice ledges/manny boxes and concrete kickers. Ramp skaters have a sketchy-mini plus a more reliable larger half-pipe. Bowl skaters can look out for a pretty serious 3-tiered pool-bowl.',
+      comments: 'Welly-central\'s main park. All features are concrete, street skaters have a few nice ledges/manny boxes and concrete kickers. Ramp skaters have a sketchy-miniramp plus a more reliable larger half-pipe. Bowl skaters can look out for a pretty serious 3-tiered, pool-bowl.',
       likes: 5
     },
     {

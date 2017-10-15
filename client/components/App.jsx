@@ -6,7 +6,7 @@ import Info from './Info'
 
 import { data } from '../../data.js'
 
-import {HashRouter as Router, Route} from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 class App extends React.Component {
   constructor (props) {

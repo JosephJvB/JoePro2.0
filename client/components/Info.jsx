@@ -1,8 +1,6 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 
-import SingleSpot from './SingleSpot'
-
 class Info extends React.Component {
   constructor (props) {
     super(props)
@@ -26,7 +24,6 @@ class Info extends React.Component {
           </div>
           <div className="column has-text-left">
             <h3 className="subtitle is-3"><Link to={`/SingleSpot/${this.props.activeSpot.spotName}`}>{this.props.activeSpot.spotName}</Link></h3>
-            <Route path="/SingleSpot" component="SingleSpot"/>
             <hr />
           </div>
           <div className="column is-2">
