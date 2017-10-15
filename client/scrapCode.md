@@ -11,3 +11,5 @@
   import { getInfo } from '../api-client'
 
   Im going to try and wrap map/info in one component, then swap that out for single spot...Will it work? tune in next week.
+
+  I have a weird thing where there is some end }/> showing up on my page and I hate it
