@@ -5,7 +5,8 @@ const SingleSpot = (props) => {
     <div className="container">
       <hr />
       <div className="columns">
-        <div className="column is-2">
+        <div className="column is-2 has-text-left">
+          <p>Check in to let the homies know you're here</p>
           <button className="button is-success">Yo, I'm here!</button>
         </div>
         <div className="column has-text-left">
