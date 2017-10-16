@@ -7,7 +7,11 @@ const SingleSpot = (props) => {
       <div className="columns">
         <div className="column is-2 has-text-left">
           <p>Check in to let the homies know you're here</p>
+          <hr />
           <button className="button is-success">Yo, I'm here!</button>
+          <hr />
+          <p className="subtitle is-4">Active Sk8rs:</p>
+          <p>{props.activeSpot.activeUsers}</p>
         </div>
         <div className="column has-text-left">
           <h1 className="subtitle is-1">{props.activeSpot.spotName}</h1>
