@@ -1,14 +1,31 @@
 import React from 'react'
-// import {match} from 'react-router-dom'
 
-// const SingleSpot = ({match}) => {
 const SingleSpot = (props) => {
   return (
-    <div>
-      {/* you are at {match.params.spotName} */}
-      <h1>{props.activeSpot.spotName}</h1>
+    <div className="container">
+      <hr />
+      <div className="columns">
+        <div className="column is-2 has-text-left">
+          <p>Check in to let the homies know you're here</p>
+          <hr />
+          <button className="button is-success">Yo, I'm here!</button>
+          <hr />
+          <p className="subtitle is-4">Active Sk8rs:</p>
+          <p>{props.activeSpot.activeUsers}</p>
+        </div>
+        <div className="column has-text-left">
+          <h1 className="subtitle is-1">{props.activeSpot.spotName}</h1>
+          <img src={props.activeSpot.spotBanner}/>
+        </div>
+      </div>
+      <div className="columns">
+        <div className="column is-1">
+        </div>
+        <div className="column has-text-left">
      want to show pics and gifs and stats and things and stuff and wow look at this website! *applause*
-      <a href='/'><button className='button is-danger'>snap back to reality</button></a>
+          <a href='/'><button className='button is-danger'>snap back to reality</button></a>
+        </div>
+      </div>
     </div>
   )
 }

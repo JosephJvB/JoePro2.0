@@ -83,13 +83,13 @@ class Map extends React.Component {
       console.log('im a sellout')
       this.map.setZoom(15)
       this.map.setCenter(fusion.position)
-      this.state.showSpotInfo(this.state.data[0])
+      this.state.showSpotInfo(this.state.data[4])
     })
     cheapskates.addListener('click', () => {
       console.log('give me $$')
       this.map.setZoom(15)
       this.map.setCenter(fusion.position)
-      this.state.showSpotInfo(this.state.data[0])
+      this.state.showSpotInfo(this.state.data[5])
     })
   }
 
