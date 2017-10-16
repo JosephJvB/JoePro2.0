@@ -16,7 +16,7 @@ const MapAndInfo = (props) => {
         <h1 className="subtitle is-3">Info:</h1>
         <hr />
         <Info activeSpot={props.activeSpot}/>
-      </div>} />
+      </div>
     </div>
 
   )

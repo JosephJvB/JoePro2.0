@@ -55,26 +55,40 @@ class Map extends React.Component {
       icon: '/images/white-dot.png'
     })
 
-    // i need these to print text to the info window
+    // want to have a way to reset the map to defaults
+    // this.map.addListener('dblclick', () => {
+    //   this.map.setZoom(13)
+    //   this.map.setCenter({ lat: -41.300000, lng: 174.772779 })
+    // })
 
     waitangi.addListener('click', () => {
       console.log('once upon a time')
+      this.map.setZoom(15)
+      this.map.setCenter(waitangi.position)
       this.state.showSpotInfo(this.state.data[1])
     })
     treetops.addListener('click', () => {
       console.log('joe made an app')
+      this.map.setZoom(15)
+      this.map.setCenter(treetops.position)
       this.state.showSpotInfo(this.state.data[2])
     })
     kmini.addListener('click', () => {
       console.log('everyone died the end')
+      this.map.setZoom(15)
+      this.map.setCenter(kmini.position)
       this.state.showSpotInfo(this.state.data[3])
     })
     fusion.addListener('click', () => {
       console.log('im a sellout')
+      this.map.setZoom(15)
+      this.map.setCenter(fusion.position)
       this.state.showSpotInfo(this.state.data[0])
     })
     cheapskates.addListener('click', () => {
       console.log('give me $$')
+      this.map.setZoom(15)
+      this.map.setCenter(fusion.position)
       this.state.showSpotInfo(this.state.data[0])
     })
   }
