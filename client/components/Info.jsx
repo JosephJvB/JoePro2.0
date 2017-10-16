@@ -11,8 +11,10 @@ class Info extends React.Component {
     this.handleLike = this.handleLike.bind(this)
   }
 
-  handleLike () {
+  // idk how to make likes count I know it is a problem with the way ive created a piece of state
+  handleLike (spot) {
     this.setState({
+      likes: this.state.likes++
     })
   }
 
@@ -27,7 +29,7 @@ class Info extends React.Component {
             <hr />
           </div>
           <div className="column is-2">
-            <button className="button is-success is-pulled-left" onClick={() => this.handleLike()}>Like</button>
+            <button className="button is-success is-pulled-left" onClick={() => this.handleLike(this.props.activeSpot)}>Like</button>
           </div>
         </div>
         <div className="columns has-text-left">
