@@ -1,11 +1,12 @@
 exports.up = function (knex, Promise) {
   return knex.schema.createTable('Spots', (table) => {
     table.increments().primary()
-    table.string('spot_name')
+    table.string('spotName')
     table.string('address')
     table.string('terrain')
     table.string('comments')
     table.integer('likes')
+    table.string('spotBanner')
   })
 }
 

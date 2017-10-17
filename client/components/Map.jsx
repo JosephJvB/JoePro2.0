@@ -11,13 +11,15 @@ class Map extends React.Component {
       showSpotInfo: props.showSpotInfo
     }
   }
+
   componentDidMount () {
     this.initMap()
   }
   initMap () {
     this.map = new window.google.maps.Map(this.refs.map, {
       center: {lat: -41.300000, lng: 174.772779},
-      zoom: 13
+      zoom: 13,
+      fullscreenControl: false
     })
 
     const waitangi = new google.maps.Marker({
@@ -55,12 +57,6 @@ class Map extends React.Component {
       icon: '/images/white-dot.png'
     })
 
-    // want to have a way to reset the map to defaults
-    // this.map.addListener('dblclick', () => {
-    //   this.map.setZoom(13)
-    //   this.map.setCenter({ lat: -41.300000, lng: 174.772779 })
-    // })
-
     waitangi.addListener('click', () => {
       console.log('once upon a time')
       this.map.setZoom(15)
@@ -96,8 +92,12 @@ class Map extends React.Component {
   render () {
     let { height, width } = this.state
     return (
-      <div className="map" style={{width, height}} ref="map" >
+      <div className="column">
+        <h1 className="subtitle is-3" onClick={() => this.resetMap}>Map:</h1>
+        <hr />
+        <div className="map" style={{width, height}} ref="map" >
         I am a map?
+        </div>
       </div>
     )
   }
