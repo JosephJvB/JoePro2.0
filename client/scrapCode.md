@@ -37,3 +37,8 @@
     this.map.setZoom(13)
     this.map.setCenter({lat: -41.300000, lng: 174.772779})
   }
+
+
+  link: 'http://www.fusionsurfskate.co.nz/'
+
+   link: 'http://www.cheapskates.co.nz/',

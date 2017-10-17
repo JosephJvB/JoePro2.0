@@ -7,6 +7,7 @@ exports.up = function (knex, Promise) {
     table.string('comments')
     table.integer('likes')
     table.string('spotBanner')
+    table.string('activeUsers')
   })
 }
 
