@@ -6,11 +6,13 @@ import MapAndInfo from './MapAndInfo'
 import SingleSpot from './SingleSpot'
 
 import { data } from '../../data.js'
+import {getInfo} from '../api-client'
 
 class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
+      error: null,
       activeSpot: data[0]
     }
     // BINDS GO HERE
@@ -21,6 +23,17 @@ class App extends React.Component {
   showSpotInfo (spot) {
     this.setState({
       activeSpot: spot
+    })
+  }
+
+  componentDidMount () {
+    this.getInfo(this.renderMyButteredBuns.bind(this))
+  }
+
+  renderMyButteredBuns (err, spots) {
+    this.setState({
+      error: err,
+      spots: spots
     })
   }
 

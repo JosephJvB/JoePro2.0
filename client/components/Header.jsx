@@ -11,6 +11,7 @@ const Header = () => {
           <h1 className="title is-1">Skate App: Spot-Map</h1>
         </div>
         <div className="column">
+          <button className="button is-info">Login</button>
         </div>
       </div>
     </section>
