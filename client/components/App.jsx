@@ -15,24 +15,33 @@ class App extends React.Component {
     this.state = {
       error: null,
       activeSpot: data[0],
-      likes: data[0].likes
+      likes: data[0].likes,
+      activeUsers: data[0].activeUsers
     }
     // BINDS GO HERE
     this.showSpotInfo = this.showSpotInfo.bind(this)
     this.handleLike = this.handleLike.bind(this)
+    this.addActiveSk8r = this.addActiveSk8r.bind(this)
   }
 
   // HANDLERS GO HERE
   showSpotInfo (spot) {
     this.setState({
       activeSpot: spot,
-      likes: spot.likes
+      likes: spot.likes,
+      activeUsers: spot.activeUsers
     })
   }
 
   handleLike (spot) {
     this.setState({
       likes: this.state.activeSpot.likes++
+    })
+  }
+
+  addActiveSk8r () {
+    this.setState({
+      activeUsers: this.state.activeSpot.activeUsers++
     })
   }
 
@@ -54,7 +63,7 @@ class App extends React.Component {
         <Route exact path='/' render={() =>
           (<MapAndInfo handleLike={this.handleLike} showSpotInfo={this.showSpotInfo} data={data} activeSpot={this.state.activeSpot}/>)
         }/>
-        <Route path='/Spots/:spotName' render={() => (<SingleSpot activeSpot={this.state.activeSpot}/>)}/>
+        <Route path='/Spots/:spotName' render={() => (<SingleSpot addActiveSk8r={this.addActiveSk8r} activeSpot={this.state.activeSpot}/>)}/>
         <Route path='/login' component={Login}/>
       </section>
     )

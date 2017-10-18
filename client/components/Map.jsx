@@ -7,6 +7,8 @@ class Map extends React.Component {
     this.state = {
       height: '500px',
       width: '100%',
+      center: {lat: -41.300000, lng: 174.772779},
+      zoom: 13,
       data: props.data,
       showSpotInfo: props.showSpotInfo
     }
@@ -17,8 +19,8 @@ class Map extends React.Component {
   }
   initMap () {
     this.map = new window.google.maps.Map(this.refs.map, {
-      center: {lat: -41.300000, lng: 174.772779},
-      zoom: 13,
+      center: this.state.center,
+      zoom: this.state.zoom,
       fullscreenControl: false
     })
 
@@ -93,7 +95,7 @@ class Map extends React.Component {
     let { height, width } = this.state
     return (
       <div className="column">
-        <h1 className="subtitle is-3">Map:</h1>
+        <h1 className="subtitle is-3" onClick={() => this.resetMap}>Map:</h1>
         <hr />
         <div className="map" style={{width, height}} ref="map" >
         I am a map?
