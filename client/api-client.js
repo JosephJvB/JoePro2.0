@@ -1,15 +1,14 @@
 import request from 'superagent'
 
-const url = 'http://localhost:3000/#/'
+const url = 'http://localhost:3000/v1/spots'
 
-export function getInfo (callback) {
+export function getSpots (callback) {
   return request
     .get(url)
     .end((err, res) => {
       if (err) {
         callback(err)
       } else {
-        console.log('This is res.body', res.body)
         callback(null, res.body)
       }
     })
