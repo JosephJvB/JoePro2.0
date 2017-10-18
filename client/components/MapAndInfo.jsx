@@ -4,9 +4,10 @@ import Map from './Map'
 import Info from './Info'
 
 const MapAndInfo = (props) => {
+  // console.log(props)
   return (
     <div className="columns">
-      <Map showSpotInfo={props.showSpotInfo} data={props.data}/>
+      <Map showSpotInfo={props.showSpotInfo} spots={props.spots}/>
       <Info handleLike={props.handleLike} activeSpot={props.activeSpot}/>
     </div>
 
