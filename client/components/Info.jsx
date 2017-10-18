@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import LikeButton from './LikeButton'
+
 const Info = (props) => {
+  console.log(props)
   return (
     <div className="column">
       <h1 className="subtitle is-3">Info:</h1>
@@ -15,7 +18,7 @@ const Info = (props) => {
             <hr />
           </div>
           <div className="column is-2">
-            <button className="button is-success is-pulled-left" onClick={() => props.handleLike(props.activeSpot)}>Like</button>
+            <LikeButton handleLike={props.handleLike} activeSpot={props.activeSpot}/>
           </div>
         </div>
         <div className="columns has-text-left">
