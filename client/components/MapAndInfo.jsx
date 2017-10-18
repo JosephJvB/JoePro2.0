@@ -7,7 +7,7 @@ const MapAndInfo = (props) => {
   return (
     <div className="columns">
       <Map showSpotInfo={props.showSpotInfo} data={props.data}/>
-      <Info activeSpot={props.activeSpot}/>
+      <Info handleLike={props.handleLike} activeSpot={props.activeSpot}/>
     </div>
 
   )

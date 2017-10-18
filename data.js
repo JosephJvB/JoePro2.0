@@ -3,10 +3,10 @@ module.exports = {
     {
       spotName: 'Which spot?',
       address: '',
-      terrain: [''],
+      terrain: '',
       comments: 'click a marker to choose a spot!',
       likes: 10,
-      spotBanner: '',
+      spotBanner: 'https://vignette.wikia.nocookie.net/quake/images/b/b6/Dopefish.jpg/revision/latest?cb=20110629173624',
       activeUsers: 0
     },
     {
