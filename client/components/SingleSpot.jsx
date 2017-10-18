@@ -17,6 +17,8 @@ const SingleSpot = (props) => {
         <div className="column has-text-left">
           <h1 className="subtitle is-1">{props.activeSpot.spotName}</h1>
           <img src={props.activeSpot.spotBanner}/>
+          <iframe src={props.activeSpot.instaVid1} width="612" height="500" />
+          <iframe src={props.activeSpot.instaVid2} width="612" height="500" />
         </div>
       </div>
       <div className="columns">

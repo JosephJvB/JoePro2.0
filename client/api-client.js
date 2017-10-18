@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-const url = 'http://localhost:3000/#/'
+const url = 'http://localhost:3000/v1/spots'
 
 export function getInfo (callback) {
   return request
