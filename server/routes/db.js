@@ -4,7 +4,6 @@ const knex = require('knex')(config)
 
 function getSpots () {
   return knex('Spots')
-    .select()
 }
 
 module.exports = {

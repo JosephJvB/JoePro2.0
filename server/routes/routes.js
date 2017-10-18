@@ -8,7 +8,9 @@ var db = require('./db')
 
 router.get('/', (req, res) => {
   db.getSpots()
-    .then(data => res.json(data))
+    .then(data => {
+      res.json(data)
+    })
 })
 
 module.exports = router

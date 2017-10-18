@@ -10,7 +10,7 @@ export function getSpots (callback) {
         console.log('Terror', err)
         callback(err)
       } else {
-        console.log('This is res.body', res.body)
+        console.log('This is res.body', res)
         callback(null, res.body)
       }
     })
