@@ -8,6 +8,8 @@ exports.up = function (knex, Promise) {
     table.integer('likes')
     table.string('spotBanner')
     table.string('activeUsers')
+    table.string('instaVid1')
+    table.string('instaVid2')
   })
 }
 
