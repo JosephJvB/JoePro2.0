@@ -9,10 +9,10 @@ const Header = () => {
         </div>
         <div className="column is-half">
           <a href="/"><img className="is-pulled-left image is-64x64" src="/images/skatelogo.png" /></a>
-          <h1 className="title is-1">Skate App: Spot-Map</h1>
+          <Link to="/"><h1 className="title is-1">Skate App: Spot-Map</h1></Link>
         </div>
         <div className="column">
-          <Link to='/login'><button className="button is-info">Login</button></Link>
+          <Link to='/login'><button className="button">Login</button></Link>
         </div>
       </div>
     </section>

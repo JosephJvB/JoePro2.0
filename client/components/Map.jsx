@@ -95,7 +95,7 @@ class Map extends React.Component {
     let { height, width } = this.state
     return (
       <div className="column">
-        <h1 className="subtitle is-3" onClick={() => this.resetMap}>Map:</h1>
+        <h1 className="subtitle is-3">Map:</h1>
         <hr />
         <div className="map" style={{width, height}} ref="map" >
         I am a map?
