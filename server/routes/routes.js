@@ -7,7 +7,7 @@ router.use(bodyParser.json())
 var db = require('./db')
 
 router.get('/', (req, res) => {
-  db.getInfo()
+  db.getSpots()
     .then(data => res.json(data))
 })
 
