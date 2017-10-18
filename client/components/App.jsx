@@ -4,9 +4,10 @@ import { Route } from 'react-router-dom'
 import Header from './Header'
 import MapAndInfo from './MapAndInfo'
 import SingleSpot from './SingleSpot'
+import Login from './Login'
 
 import { data } from '../../data.js'
-import {getInfo} from '../api-client'
+// import {getInfo} from '../api-client'
 
 class App extends React.Component {
   constructor (props) {
@@ -26,16 +27,16 @@ class App extends React.Component {
     })
   }
 
-  componentDidMount () {
-    this.getInfo(this.renderMyButteredBuns.bind(this))
-  }
+  // componentDidMount () {
+  //   this.getInfo(this.renderMyButteredBuns.bind(this))
+  // }
 
-  renderMyButteredBuns (err, spots) {
-    this.setState({
-      error: err,
-      spots: spots
-    })
-  }
+  // renderMyButteredBuns (err, spots) {
+  //   this.setState({
+  //     error: err,
+  //     spots: spots
+  //   })
+  // }
 
   render () {
     return (
@@ -45,6 +46,7 @@ class App extends React.Component {
           (<MapAndInfo showSpotInfo={this.showSpotInfo} data={data} activeSpot={this.state.activeSpot}/>)
         }/>
         <Route path='/Spots/:spotName' render={() => (<SingleSpot activeSpot={this.state.activeSpot}/>)}/>
+        <Route path='/login' component={Login}/>
       </section>
     )
   }
