@@ -19,6 +19,7 @@ class App extends React.Component {
     }
     // BINDS GO HERE
     this.showSpotInfo = this.showSpotInfo.bind(this)
+    this.renderSpots = this.renderSpots.bind(this)
   }
 
   // HANDLERS GO HERE
@@ -29,14 +30,17 @@ class App extends React.Component {
   }
 
   componentDidMount () {
-    getSpots(this.renderSpots.bind(this))
+    this.renderSpots()
   }
 
   renderSpots (err, spots) {
-    this.setState({
-      error: err,
-      spots: spots || []
-    })
+    return getSpots()
+      .then(spots => {
+        this.setState({
+          error: err,
+          spots: spots || []
+        })
+      })
   }
 
   render () {
