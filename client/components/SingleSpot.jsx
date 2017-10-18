@@ -11,7 +11,7 @@ const SingleSpot = (props) => {
           <p>Check in to let the homies know you're here</p>
           <hr />
           <CheckinButt addActiveSk8r={props.addActiveSk8r} />
-          <p className="subtitle is-4">Active Sk8rs:</p>
+          <p>Active Sk8rs:</p>
           <p>{props.activeSpot.activeUsers}</p>
           <hr />
         </div>
