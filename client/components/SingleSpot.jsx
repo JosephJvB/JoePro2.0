@@ -1,5 +1,7 @@
 import React from 'react'
 
+import CheckinButt from './CheckinButt'
+
 const SingleSpot = (props) => {
   return (
     <div className="container">
@@ -8,8 +10,7 @@ const SingleSpot = (props) => {
         <div className="column is-2 has-text-left">
           <p>Check in to let the homies know you're here</p>
           <hr />
-          <button id="butt" onClick={() => props.addActiveSk8r(props.activeSpot)} className="button is-success">Yo, I'm here!</button>
-          <hr />
+          <CheckinButt addActiveSk8r={props.addActiveSk8r} />
           <p className="subtitle is-4">Active Sk8rs:</p>
           <p>{props.activeSpot.activeUsers}</p>
           <hr />
