@@ -7,7 +7,7 @@ class Map extends React.Component {
     this.state = {
       height: '500px',
       width: '100%',
-      data: props.data,
+      spots: this.props.spots,
       showSpotInfo: props.showSpotInfo
     }
   }
@@ -61,31 +61,31 @@ class Map extends React.Component {
       console.log('once upon a time')
       this.map.setZoom(15)
       this.map.setCenter(waitangi.position)
-      this.state.showSpotInfo(this.state.data[1])
+      this.state.showSpotInfo(this.state.spots[1])
     })
     treetops.addListener('click', () => {
       console.log('joe made an app')
       this.map.setZoom(15)
       this.map.setCenter(treetops.position)
-      this.state.showSpotInfo(this.state.data[2])
+      this.state.showSpotInfo(this.state.spots[2])
     })
     kmini.addListener('click', () => {
       console.log('everyone died the end')
       this.map.setZoom(15)
       this.map.setCenter(kmini.position)
-      this.state.showSpotInfo(this.state.data[3])
+      this.state.showSpotInfo(this.state.spots[3])
     })
     fusion.addListener('click', () => {
       console.log('im a sellout')
       this.map.setZoom(15)
       this.map.setCenter(fusion.position)
-      this.state.showSpotInfo(this.state.data[4])
+      this.state.showSpotInfo(this.state.spots[4])
     })
     cheapskates.addListener('click', () => {
       console.log('give me $$')
       this.map.setZoom(15)
       this.map.setCenter(fusion.position)
-      this.state.showSpotInfo(this.state.data[5])
+      this.state.showSpotInfo(this.state.spots[5])
     })
   }
 
