@@ -1,5 +1,7 @@
 import request from 'superagent'
 
+// import {getShredditPosts} from '../api-client'
+
 export const GET_POSTS = 'GET_POSTS'
 export const SHOW_ERROR = 'SHOW_ERROR'
 
@@ -26,10 +28,9 @@ export function fetchPosts (type) {
       .end((err, res) => {
         if (err) {
           dispatch(showError(err.message))
-          return
+        } else {
+          dispatch(getPosts(res.body))
         }
-        console.log(res.body)
-        dispatch(getPosts(res.body))
       })
   }
 }

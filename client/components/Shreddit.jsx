@@ -14,6 +14,16 @@ const Shreddit = (props) => {
         <option value="new">New</option>
       </select>
       <input type="submit" onClick={(e) => props.dispatch(fetchPosts(e.target.value))}/>
+
+      <div className="columns">
+        <div className="column is-3">
+        </div>
+        <div className="column">
+          {props.shredditPosts.title}
+          {props.shredditPosts.selftext}
+          {props.shredditPosts.thumbnail}
+        </div>
+      </div>
     </div>
   )
 }
