@@ -27,7 +27,7 @@ const Info = (props) => {
           <div className="column">
             <h3 className="subtitle is-4"><strong>Address:</strong> {props.activeSpot.address}</h3>
             <h3 className="subtitle is-4"><strong>Terrain:</strong> {props.activeSpot.terrain}</h3>
-            <div>
+            <div className="butts">
               <img src="https://bulma.io/images/placeholders/128x128.png"/>
               <img src="https://bulma.io/images/placeholders/128x128.png"/>
               <img src="https://bulma.io/images/placeholders/128x128.png"/>

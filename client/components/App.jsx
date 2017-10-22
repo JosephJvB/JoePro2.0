@@ -2,11 +2,11 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 
 import Header from './Header'
-import MapAndInfo from './MapAndInfo'
+import Map from './Map'
+import Info from './Info'
 import SingleSpot from './SingleSpot'
 import Login from './Login'
 
-// import { data } from '../../data.js'
 import {getSpots} from '../api-client'
 
 class App extends React.Component {
@@ -64,9 +64,14 @@ class App extends React.Component {
     return (
       <section className="section has-text-centered">
         <Header />
-        <Route exact path='/' render={() =>
-          (<MapAndInfo handleLike={this.handleLike} showSpotInfo={this.showSpotInfo} spots={this.state.spots} activeSpot={this.state.activeSpot}/>)
-        }/>
+        <div className="columns">
+          <Route exact path='/' render={() =>
+            (<Map showSpotInfo={this.showSpotInfo} spots={this.state.spots}/>)
+          }/>
+          <Route exact path='/' render={() =>
+            (<Info handleLike={this.handleLike} activeSpot={this.state.activeSpot}/>)
+          }/>
+        </div>
         <Route path='/Spots/:spotName' render={() => (<SingleSpot addActiveSk8r={this.addActiveSk8r} activeSpot={this.state.activeSpot}/>)}/>
         <Route path='/login' component={Login}/>
       </section>
