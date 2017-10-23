@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-// import {getShredditPosts} from '../api-client'
+import {getShredditPosts} from '../api-client'
 
 export const GET_POSTS = 'GET_POSTS'
 export const SHOW_ERROR = 'SHOW_ERROR'
@@ -23,14 +23,12 @@ export const showError = (errorMessage) => {
 
 export function fetchPosts (type) {
   return (dispatch) => {
-    request
-      .get(`/api/v1/reddit/subreddit/skateboarding/${type}`)
-      .end((err, res) => {
-        if (err) {
-          dispatch(showError(err.message))
-        } else {
-          dispatch(getPosts(res.body))
-        }
-      })
+    getShredditPosts(type, (err, posts) => {
+      if (err) {
+        dispatch(showError(err.message))
+      } else {
+        dispatch(getPosts(posts))
+      }
+    })
   }
 }

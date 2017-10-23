@@ -14,15 +14,15 @@ export function getSpots (callback) {
     })
 }
 
-// export function getShredditPosts (type, callback) {
-//   request
-//     .get(`/api/v1/reddit/subreddit/skateboarding/${type}`)
-//     .end((err, res) => {
-//       if (err) {
-//         callback(err)
-//         console.log(err)
-//       } else {
-//         callback(null, res.body)
-//       }
-//     })
-// }
+export function getShredditPosts (type, callback) {
+  request
+    .get(`/api/v1/reddit/subreddit/skateboarding/${type}`)
+    .end((err, res) => {
+      if (err) {
+        callback(err)
+        console.log(err)
+      } else {
+        callback(null, res.body)
+      }
+    })
+}

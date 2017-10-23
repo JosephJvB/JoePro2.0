@@ -8,10 +8,11 @@ router.use(bodyParser.json())
 
 router.get('/skateboarding/:type', (req, res) => {
   request
-    .get(`http://www.reddit.com/r/skateboarding/${req.params.type}}.json`)
+    .get(`http://www.reddit.com/r/skateboarding/${req.params.type}.json`)
     .end((err, result) => {
       if (err) {
         res.status(500).send(err.message)
+        console.log(err)
       } else {
         res.json(result.body.data.children)
       }
