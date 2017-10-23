@@ -11,7 +11,6 @@ const Shreddit = (props) => {
       hey im shreddit<br/>
       sort posts by:
         <select id="sort">
-          <option value="">Hot</option>
           <option value="top">Top</option>
           <option value="new">New</option>
         </select>
