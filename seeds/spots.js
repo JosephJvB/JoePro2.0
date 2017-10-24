@@ -1,10 +1,10 @@
 
 exports.seed = function (knex, Promise) {
   // Deletes ALL existing entries
-  return knex('Spots').del()
+  return knex('spots').del()
     .then(function () {
       // Inserts seed entries
-      return knex('Spots').insert([
+      return knex('spots').insert([
         {spotName: 'Which spot?', address: '', terrain: '', comments: 'click a marker to choose a spot!', likes: 10, spotBanner: 'https://vignette.wikia.nocookie.net/quake/images/b/b6/Dopefish.jpg/revision/latest?cb=20110629173624', activeUsers: 0, instaVid1: '', instaVid2: ''},
         {spotName: 'Waitangi Park',
           address: 'Chaffers Wharf',
