@@ -20,7 +20,7 @@ function register (req, res, next) {
           res.status(201).send('Welcome to Welly\'s skaters, don\'t push mongo')
         })
         .catch(() => {
-          res.status(500).send('upto G?')
+          return res.status(500).send('upto G?')
         })
     })
 }
