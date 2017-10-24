@@ -1,5 +1,3 @@
-import request from 'superagent'
-
 import {getShredditPosts} from '../api-client'
 
 export const GET_POSTS = 'GET_POSTS'
@@ -18,8 +16,6 @@ export const showError = (errorMessage) => {
     errorMessage
   }
 }
-
-// id like it if you could choose whether you wanted the top posts or hot posts or new posts from my site rather than from reddit.
 
 export function fetchPosts (type) {
   return (dispatch) => {
