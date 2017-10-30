@@ -25,7 +25,7 @@ class LikeButton extends React.Component {
         {this.state.likedSpots.find(spot => spot == this.props.activeSpot)
           ? <button className="button is-success is-pulled-left" disabled>:)</button>
           : <button className="button is-success is-pulled-left" onClick={() => this.handleClick()}>Like</button>
-          }
+        }
       </div>
     )
   }
