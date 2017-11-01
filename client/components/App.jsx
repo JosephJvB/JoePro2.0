@@ -7,6 +7,7 @@ import Info from './Info'
 import SingleSpot from './SingleSpot'
 import Login from './Login'
 import Shreddit from './Shreddit'
+import VidSpike from './VidSpike'
 
 import {getSpots} from '../api-client'
 
@@ -76,6 +77,7 @@ class App extends React.Component {
         <Route path='/Spots/:spotName' render={() => (<SingleSpot addActiveSk8r={this.addActiveSk8r} activeSpot={this.state.activeSpot}/>)}/>
         <Route path='/login' component={Login}/>
         <Route path='/shreddit' component={Shreddit} />
+        <Route path='/vidspike' component={VidSpike} />
       </section>
     )
   }
