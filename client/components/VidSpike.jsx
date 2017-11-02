@@ -6,9 +6,9 @@ class VidSpike extends React.Component {
     super(props)
     this.state = {
       video: null,
-      startTime: 0,
-      quoteStart: 6,
-      quoteEnd: 9,
+      startTime: 99,
+      quoteStart: 129,
+      quoteEnd: 132,
       pauseTime: 5
     }
     // binds go here
@@ -25,14 +25,15 @@ class VidSpike extends React.Component {
     this.setState({
       video: event.target
     })
+    event.target.seekTo(this.state.startTime)
     event.target.playVideo()
-    setTimeout(() => this.muteClip(), this.state.quoteStart * 1000)
+    setTimeout(() => this.muteClip(), (this.state.quoteStart - this.state.startTime) * 1000)
   }
 
   muteClip () {
     console.log('be quiet')
     this.state.video.mute()
-    setTimeout(() => this.pauseClip(), this.state.quoteEnd * 1000)
+    setTimeout(() => this.pauseClip(), (this.state.quoteEnd - this.state.quoteStart) * 1000)
   }
   pauseClip () {
     console.log('let them speak')
@@ -41,14 +42,14 @@ class VidSpike extends React.Component {
   }
   restartClip () {
     console.log('do-over!')
-    this.state.video.seekTo(this.state.startTime)
+    this.state.video.seekTo(this.state.quoteStart)
     this.state.video.unMute()
-    setTimeout(() => this.endVideo(), 1000)
+    setTimeout(() => this.endVideo(), 500)
   }
   endVideo () {
     console.log('oooh thats what you said')
     this.state.video.playVideo()
-    setTimeout(() => this.state.video.pauseVideo(), this.state.quoteEnd * 1000)
+    setTimeout(() => this.state.video.pauseVideo(), (this.state.quoteEnd - this.state.quoteStart) * 1000)
   }
 
   render () {
@@ -59,7 +60,7 @@ class VidSpike extends React.Component {
     return (
       <div>
 
-        <YouTube videoId="VQNoPqLuZ74" opts={opts} onReady={this.startClip}/>
+        <YouTube videoId="TU7CDejp6Lw" opts={opts} onReady={this.startClip} />
 
         <button>probably need a continue button, visible after, to go to leaderboard or next player</button>
       </div>
