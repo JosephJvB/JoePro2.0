@@ -60,7 +60,7 @@ class VidSpike extends React.Component {
     return (
       <div>
 
-        <YouTube videoId="TU7CDejp6Lw" opts={opts} onReady={this.startClip}/>
+        <YouTube videoId="TU7CDejp6Lw" opts={opts} onReady={this.startClip} />
 
         <button>probably need a continue button, visible after, to go to leaderboard or next player</button>
       </div>
